@@ -26,7 +26,7 @@ const AddUser = props => {
 			<input  class="form-control" type="text" name="name" value={user.name} onChange={handleInputChange} />
 			<label>password</label>
 			<input  class="form-control" type="text" name="password" value={user.password} onChange={handleInputChange} />
-			<button>Add new user</button>
+			<button className="btn btn-primary mt-3">Add new user</button>
 		</form>
 	)
 }

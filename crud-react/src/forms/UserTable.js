@@ -1,11 +1,13 @@
 import React from 'react'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import { Table,Button } from 'react-bootstrap'
 
 const UserTable = props => (
-  <table>
+  <Table striped bordered hover>
     <thead>
       <tr>
         <th>Name</th>
-        <th>Username</th>
+        <th>password</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -16,20 +18,20 @@ const UserTable = props => (
             <td>{user.name}</td>
             <td>{user.password}</td>
             <td>
-              <button
+              <Button
                 onClick={() => {
                   props.editRow(user)
                 }}
-                className="button muted-button"
+                className="btn btn-primary mr-3"
               >
                 Edit
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={() => props.deleteUser(user.id)}
-                className="button muted-button"
+                className="btn btn-danger"
               >
                 Delete
-              </button>
+              </Button>
             </td>
           </tr>
         ))
@@ -39,7 +41,7 @@ const UserTable = props => (
         </tr>
       )}
     </tbody>
-  </table>
+  </Table>
 )
 
 export default UserTable

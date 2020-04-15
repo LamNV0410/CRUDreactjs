@@ -28,8 +28,8 @@ const EditUserForm = props => {
       <input class="form-control" type="text" name="name" value={user.name} onChange={handleInputChange} />
       <label>password</label>
       <input class="form-control" type="text" name="password" value={user.password} onChange={handleInputChange} />
-      <button>Update user</button>
-      <button onClick={() => props.setEditing(false)}>
+      <button className="btn btn-primary mt-3">Update user</button>
+      <button className="btn btn-default mt-3" onClick={() => props.setEditing(false)}>
         Cancel
       </button>
     </form>

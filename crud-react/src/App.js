@@ -44,9 +44,8 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>CRUD App with Hooks</h1>
       <div className="d-flex flex-row justify-content-around">
-        <div>
+        <div className="col-6">
           {editing ? (
             <Fragment>
               <h2>Edit user</h2>
@@ -64,7 +63,7 @@ const App = () => {
               </Fragment>
             )}
         </div>
-        <div>
+        <div className="col-6">
           <h2>View users</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
         </div>
